@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MusicPile">
+    <meta name="author" content="">
+
+    <title>SoundPile - Share your sounds!</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src='/images/logo.png' class='logo' /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <% if(typeof user === 'undefined') { %>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="/browse">Browse</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                </ul>
+                <%} else {%>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/profile/<%=user.id%>" ><%=user.username%></a>
+                        </li>
+                        <li>
+                            <a href="/browse">Browse</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+    <header class="business-header parralax-window" data-parallax="scroll" data-image-src="images/header-background.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline text-center">SoundPile</h1>
+                    <p class='text-center' id='description'>
+                        Share your sounds !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <hr>
+        <div class="row" id='about'>
+            <div class="col-sm-12" >
+                <h2>About</h2>
+                <p class='app-description'>
+                    Application about new starting producers in electronic music. We help them find good sounds for their projects. This is a place where you can find all you need, and upload sounds to help others !
+                </p>
+                <p>
+                    <div class='row'>
+                        <div class='col-md-offset-3 col-md-3 col-xs-12'>
+                                <a class="btn btn-default btn-lg button-group" href="/browse">Browse now!</a>
+                            </div>
+                            <div class='col-md-3 col-xs-12'>
+                                <% if(typeof user === 'undefined') { %>
+                                    <a class="btn btn-default btn-lg button-group" href="/login">Or upload your own!</a>
+                                <% } else { %>
+                                    <a class="btn btn-default btn-lg button-group" href="/profile/<%=user.id%>">Or upload your own!</a>
+                                <% } %>
+                            </div>
+                    </div>
+
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <img class="img-responsive img-center" src="images/music-upload.png" alt="Upload your own sounds!">
+                <h2 class='text-center'>Upload your own sounds!</h2>
+                <p class='step-info'>Upload your own sounds and help others.</p>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <img class="img-circle img-responsive img-center" src="images/music-download.png" alt="Download sounds!">
+                <h2 class='text-center'>Download sounds!</h2>
+                <p class='step-info'>Find perfect sounds for your projects.</p>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <img class="img-responsive img-center" src="images/mixer.png" alt="Mix them!">
+                <h2 class='text-center' >Mix them!</h2>
+                <p class='step-info'>Use them to make awesome projects.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; MusicPile 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/parallax.min.js"></script>
+    <script src='/js/navbar.js'></script>
+
+</body>
+
+</html>

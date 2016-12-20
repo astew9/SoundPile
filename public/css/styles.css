@@ -1,0 +1,314 @@
+/* Landing page */
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+.business-header {
+    height: 500px;
+}
+
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+header  .tagline {
+    font-size: 100px;
+    margin-top: 150px;
+}
+#description {
+    font-size: 45px;
+    color: #fc4a1a !important;
+    text-shadow: 0 0 10px #000;
+
+}
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #fc4a1a !important;
+    font-size: 18px;
+    border: none;
+    transition-duration: 0.3s;
+}
+.navbar-brand img {
+    width: 130px;
+}
+.navbar-default .navbar-nav>li>a
+{
+    color: #fc4a1a;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    transition: 0.1s ease;
+    color: #f7b733 !important;
+
+}
+.button-group {
+    width: 100%;
+    height: 70px;
+    line-height: 48px;
+    vertical-align:middle;
+    font-size: 25px;
+    background-color: white;
+    color: #fc4a1a;
+    border: 1px solid;
+    transition: 0.2s ease;
+    margin-bottom: 10px;
+}
+.button-group:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+.app-description {
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.step-info {
+    font-size: 15px;
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    header .tagline {
+        margin-top: 180px;
+        font-size: 50px;
+    }
+    #description {
+        font-size: 38px;
+    }
+}
+/* End of landing page */
+
+/* Forms page */
+
+#login {
+    padding-top: 50px;
+    background-image: url('../images/login-background.jpg');
+    background-size: cover;
+}
+.submit-form {
+
+    margin-top: 110px;
+    font-size: 20px;
+    margin-bottom: 110px;
+}
+.submit-form input, #bio {
+    color: #fc4a1a;
+    height: 35px;
+    font-size: 15px;
+    font-weight:600;
+}
+.submit-form input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+{
+    color: #fc4a1a !important;
+}
+.submit-form input::-moz-placeholder, textarea::-webkit-input-placeholder
+{
+    color: #fc4a1a !important;
+}
+.submit-form input[type='text'], .submit-form input[type='password'] {
+    width: 100%;
+}
+.button-submit {
+    height: 50px;
+    width: 90px;
+    color: #fc4a1a;
+    font-weight: bold;
+    background-color: white;
+}
+.submit-form label {
+    color: white;
+}
+.login-footer {
+    color: white;
+}
+.register-here {
+    color: white;
+    font-size: 18px;
+    float: right;
+    line-height: 50px;
+    vertical-align: middle;
+    transition: 0.25s ease;
+}
+.register-here:hover {
+    text-decoration: none;
+    color: #fc4a1a;
+
+}
+#profile_pic {
+    font-size: 16px;
+}
+#bio {
+    resize: none;
+    height: 120px;
+}
+#register {
+    margin-top: 60px;
+}
+/* End of forms page */
+
+/* Profile page */
+#profile {
+    padding-top: 50px;
+    background-color: white;
+}
+.profile-header {
+    height: 300px;
+    background-image: url('../images/profile-header.jpg');
+    background-size: cover;
+    width: 100%;
+}
+.image-container {
+    max-height: 200px;
+    top: 155px;
+}
+.profile-picture {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+.info {
+    top: 220px;
+    color: white;
+}
+.username, .full-name {
+    margin: 0px;
+}
+.full-name {
+    margin-bottom: 5px;
+}
+.profile-bio, .uploaded-sounds {
+    padding-top: 80px;
+}
+.bio-text {
+    text-align: justify;
+    font-size: 18px;
+    padding: 10px;
+}
+.single-sound {
+    width: 100%;
+}
+audio {
+    height: 32px;
+    width: 93%;
+}
+.sounds-list {
+    width: 100%;
+    padding: 10px;
+    max-height: 900px;
+    overflow: auto;
+}
+.single-sound {
+    display: inline-block;
+    margin: 0 auto;
+}
+#bio-title {
+    margin-top: 0px;
+    color: #fc4a1a;
+}
+.remove-sound {
+    font-size: 22px;
+    vertical-align: super;
+    color: red;
+    margin-left: 5px;
+}
+.add-new {
+    float: right;
+    border-color: #fc4a1a;
+    color: #fc4a1a;
+    margin-right: 10px;
+}
+.modal-submit {
+    background-color: white;
+    border: 1px solid #fc4a1a;
+    color: #fc4a1a;
+    width: 80px;
+    float: right;
+    height: 35px;
+    font-size: 16px;
+}
+.modal-content {
+    height: 260px;
+}
+@media screen and (max-width: 990px) {
+    .username, .full-name {
+        color: black;
+        text-align: center;
+    }
+    .username {
+        color: #fc4a1a;
+    }
+    .info {
+        top: 170px;
+    }
+    .profile-bio {
+        margin-top: 90px;
+    }
+}
+/* End of profile page */
+
+/* Browse page */
+#browse {
+    padding-top: 30px;
+}
+.added-by {
+    display: inline-block;
+    font-size: 16px;
+    text-align: right;
+    width: 100%;
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+.added-by-username {
+    color: #fc4a1a;
+}
+.added-by-username:hover {
+    text-decoration: none;
+    color: #f7b733;
+}
+.browse-heading {
+    font-size: 100px;
+    color: white;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 300px;
+    text-shadow: 0 0 10px #000;
+}
+.browse-header {
+    height: 300px;
+    background-image: url('../images/profile-header.jpg');
+    background-size: cover;
+    width: 100%;
+}
+.sounds-list-browse {
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.search-form {
+    margin-top: 50px;
+    box-shadow: 0 0 5px #fc4a1a;
+    padding: 20px;
+}
+.search-form button {
+    width: 100%;
+    height: 34px;
+    color: #fc4a1a;
+}
+@media screen and (max-width: 990px) {
+    .search-form input {
+        margin-bottom: 10px;
+    }
+}
+
+/* End of browse page */
